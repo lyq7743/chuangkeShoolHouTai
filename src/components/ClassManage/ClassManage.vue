@@ -1,12 +1,12 @@
 <template>
-  <div class="HomeWarp">
-    
+  <div class="hello">
+    <p>ClassManage</p>
   </div>
 </template>
 
 <script>
-
 export default {
+  name: 'HelloWorld',
   data () {
     return {
       

@@ -7,81 +7,82 @@
 				<el-submenu index="1">
 					<template slot="title">
 						<i class="el-icon-location"></i>
-						<span>导航一</span>
+						<span>管理员管理</span>
 					</template>
 					<el-submenu index="1-1">
-						<template slot="title">选项1</template>
+						<template slot="title">
+							<router-link to="/Admin">管理员管理</router-link>
+						</template>
 					</el-submenu>
 				</el-submenu>
-				<el-menu-item index="2">
-					<i class="el-icon-location"></i>
-					<span>导航二</span>
-				</el-menu-item>
-				<el-menu-item index="3">
-					<i class="el-icon-location"></i>
-					<span>导航三</span>
-				</el-menu-item>
-				<el-menu-item index="4">
-					<i class="el-icon-location"></i>
-					<span>导航四</span>
-				</el-menu-item>
+				<el-submenu index="2">
+					<template slot="title">
+						<i class="el-icon-location"></i>
+						<span>课程管理</span>
+					</template>
+					<el-submenu index="1-1">
+						<template slot="title">
+							<router-link to="/CourseManage">课程管理</router-link>
+						</template>
+					</el-submenu>
+				</el-submenu>
+				<el-submenu index="3">
+					<template slot="title">
+						<i class="el-icon-location"></i>
+						<span>班级管理</span>
+					</template>
+					<el-submenu index="1-1">
+						<template slot="title">
+							<router-link to="/ClassManage">班级管理</router-link>
+						</template>
+					</el-submenu>
+				</el-submenu>
+				<el-submenu index="4">
+					<template slot="title">
+						<i class="el-icon-location"></i>
+						<span>直播课程管理</span>
+					</template>
+					<el-submenu index="1-1">
+						<template slot="title">
+							<router-link to="/DirectSeeding">直播课程管理</router-link>
+						</template>
+					</el-submenu>
+				</el-submenu>
 				<el-submenu index="5">
 					<template slot="title">
 						<i class="el-icon-location"></i>
-						<span>导航五</span>
+						<span>教师管理</span>
 					</template>
-					<el-menu-item-group>
-						<el-menu-item index="5-1">选项1</el-menu-item>
-					</el-menu-item-group>
-
-					<el-submenu index="5-2">
-						<template slot="title">选项2</template>
-					</el-submenu>
-				</el-submenu>
-				<el-submenu index="6">
-					<template slot="title">
-						<i class="el-icon-location"></i>
-						<span>导航六</span>
-					</template>
-					<el-submenu index="6-1">
-						<template slot="title">选项4</template>
-						<el-menu-item index="6-4-1">选项1</el-menu-item>
-					</el-submenu>
-				</el-submenu>
-				<el-submenu index="7">
-					<template slot="title">
-						<i class="el-icon-location"></i>
-						<span>导航七</span>
-					</template>
-
-					<el-submenu index="7-4">
-						<template slot="title">选项4</template>
-						<el-menu-item index="7-4-1">选项1</el-menu-item>
+					<el-submenu index="1-1">
+						<template slot="title">
+							<router-link to="/TeacherManage">教师管理</router-link>
+						</template>
 					</el-submenu>
 				</el-submenu>
 			</el-menu>
 		</el-col>
-
 		<div class="table">
-			<h2>创客学院后台管理系统</h2>
-
-			<!-- <div class="btn">
-				<el-input placeholder="手机号" v-model="userName" clearable>
-					<template slot="prepend">搜索条件</template>
-				</el-input>
-			</div>
-
-			<el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange">
-				<el-table-column type="selection" width="50">
-				</el-table-column>
-				
-			</el-table> -->
-
-			<!-- asdasdv:{{allSize}} -->
-			<!-- <el-pagination background layout="prev, pager, next" :total="allSize" @current-change="handleCurrentChange">
-			</el-pagination> -->
-
+					<h2>创客学院后台管理系统</h2>
+		
+					<!-- <div class="btn">
+						<el-input placeholder="手机号" v-model="userName" clearable>
+							<template slot="prepend">搜索条件</template>
+						</el-input>
+					</div>
+		
+					<el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange">
+						<el-table-column type="selection" width="50">
+						</el-table-column>
+						
+					</el-table> -->
+		
+					<!-- asdasdv:{{allSize}} -->
+					<!-- <el-pagination background layout="prev, pager, next" :total="allSize" @current-change="handleCurrentChange">
+					</el-pagination> -->
+		
 		</div>
+		
+		<router-view></router-view>
 	</div>
 </template>
 
