@@ -63,9 +63,9 @@
 		</el-col>
 		<div class="main">
 			<div class="table">
-					<h2>创客学院后台管理系统</h2>
-					<router-view></router-view>
+				<h2>创客学院后台管理系统</h2>
 			</div>
+			<router-view></router-view>
 		</div>
 		
 		

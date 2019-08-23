@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    	admin
+    	<p>admin</p>
+    	123
   </div>
 </template>
 
