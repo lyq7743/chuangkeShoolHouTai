@@ -61,28 +61,15 @@
 				</el-submenu>
 			</el-menu>
 		</el-col>
-		<div class="table">
+		<div class="main">
+			<div class="table">
 					<h2>创客学院后台管理系统</h2>
-		
-					<!-- <div class="btn">
-						<el-input placeholder="手机号" v-model="userName" clearable>
-							<template slot="prepend">搜索条件</template>
-						</el-input>
-					</div>
-		
-					<el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange">
-						<el-table-column type="selection" width="50">
-						</el-table-column>
-						
-					</el-table> -->
-		
-					<!-- asdasdv:{{allSize}} -->
-					<!-- <el-pagination background layout="prev, pager, next" :total="allSize" @current-change="handleCurrentChange">
-					</el-pagination> -->
-		
+					<router-view></router-view>
+			</div>
 		</div>
 		
-		<router-view></router-view>
+		
+		
 	</div>
 </template>
 
@@ -172,5 +159,8 @@
 	h2 {
 		text-align: left;
 		color: #8fd8d0;
+	}
+	.main{
+		width: 100%;
 	}
 </style>

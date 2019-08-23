@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <p>Course</p>
+    	<div class="table">
+    		<h2>课程管理</h2>
+    	</div>
   </div>
 </template>
 
