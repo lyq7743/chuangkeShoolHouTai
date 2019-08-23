@@ -64,11 +64,18 @@
 			</el-menu>
 		</el-col>
 		<div class="main">
+<<<<<<< HEAD
 			<!--<div class="table">
 					<h2>创客学院后台管理系统</h2>
 			</div>-->
 			<router-view></router-view>
 		</div>
+=======
+			<div class="table">
+				<h2>创客学院后台管理系统</h2>
+			</div>
+			<router-view></router-view>
+>>>>>>> f5451e1e901498742811af9d6ca42e0e091e85c3
 		</div>
 		<div class="table">
 					<h2>创客学院后台管理系统</h2>

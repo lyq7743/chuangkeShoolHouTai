@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 	<div>
 		<!--admin-->
 		<div class="inputin">
@@ -40,6 +41,12 @@
 		</el-pagination>
 		<!--表格结束-->
 	</div>
+=======
+  <div class="hello">
+    	<p>admin</p>
+    	123
+  </div>
+>>>>>>> f5451e1e901498742811af9d6ca42e0e091e85c3
 </template>
 
 <script>

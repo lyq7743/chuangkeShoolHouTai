@@ -1,16 +1,19 @@
 <template>
   <div class="HomeWarp">
-    
+    <!--<home></home>-->
   </div>
 </template>
 
 <script>
-
+//import home from '../components/home.vue'
 export default {
-  data () {
+	data () {
     return {
-      
+      msg: 'Welcome to Your Vue.js App'
     }
+  },
+  components:{
+//	  home
   }
 }
 </script>
