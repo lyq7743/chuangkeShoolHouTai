@@ -1,6 +1,8 @@
 <template>
-	<div class="ListWarp">
-
+	<div>
+<div class="ListWarp">
+	
+ 
 		<el-col :span="12">
 			<el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#545c64"
 			 text-color="#fff" active-text-color="#ffd04b">
@@ -62,25 +64,25 @@
 			</el-menu>
 		</el-col>
 		<div class="main">
-			<div class="table">
+			<!--<div class="table">
 					<h2>创客学院后台管理系统</h2>
-					<router-view></router-view>
-			</div>
+			</div>-->
+			<router-view></router-view>
 		</div>
-		
-		
-		
+		</div>
+		<div class="table">
+					<h2>创客学院后台管理系统</h2>
+			</div>
 	</div>
 </template>
 
 <script>
 
 	export default {
-		data() {
-			return {
-				
-			}
-		},
+	  data() {
+      return {
+      }
+    },
 		methods: {
 			toggleSelection(rows) {
 				if (rows) {
@@ -120,6 +122,7 @@
 						this.allSize = res.data.allcount
 					})
 			}
+			 
 		}
 	}
 </script>
@@ -131,18 +134,23 @@
 		width: 100%;
 	}
     .el-col {
+    	position: relative;
+     	top: 115px;
 		width: 15%;
-		height: 1000px;
+		height:500px;
 	}
-
+   
 	.el-menu-vertical-demo {
 		height: 1000px;
 	}
 
 	.table {
-		width: 82%;
-		position: relative;
-		margin-left: 20px;
+		width: 100%;
+		position: absolute;
+		top:20px;
+		padding-left: 30px;
+		background:#2a3e54;
+		height:80px;
 	}
 
 	.el-input {
@@ -158,9 +166,11 @@
 
 	h2 {
 		text-align: left;
-		color: #8fd8d0;
+		color: #fff;
+		line-height:50px;
 	}
 	.main{
 		width: 100%;
 	}
+	 
 </style>
