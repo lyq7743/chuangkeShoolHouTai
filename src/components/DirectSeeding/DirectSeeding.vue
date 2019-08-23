@@ -96,6 +96,9 @@
 			},
 			handleSelect(item) {
 				console.log(item);
+			},
+			handleCurrentChange(){
+				
 			}
 		},
 		mounted() {
@@ -146,10 +149,11 @@
 					datein:'下午3:00',
 					time:'三小时'
 				}],
-				//			input1: '',
+				input1: '',
 				restaurants: [],
 				state: '',
-				timeout: null
+				timeout: null,
+				allSize:10
 			}
 		}
 	}

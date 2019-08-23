@@ -92,6 +92,9 @@
 			},
 			handleSelect(item) {
 				console.log(item);
+			},
+			handleCurrentChange(){
+				
 			}
 		},
 		mounted() {
@@ -135,10 +138,11 @@
 					number:'王老师',
 					address: '20人'
 				}],
-				//			input1: '',
+				input1: '',
 				restaurants: [],
 				state: '',
-				timeout: null
+				timeout: null,
+				allSize:10
 			}
 		}
 	}

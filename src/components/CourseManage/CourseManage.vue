@@ -2,7 +2,7 @@
   <div class="hello">
     	<div class="main">
     		<div class="rmkc">
-    			<div>热门课程</div>
+    			<!--<div>热门课程</div>-->
     			<div id="myChart" ></div>
     			<div></div>
     		</div>
@@ -64,7 +64,7 @@ export default {
                 type: 'pie',
                 id: 'pie',
                 radius: '30%',
-                center: ['50%', '25%'],
+                center: ['50%', '30%'],
             }
         ]
 			})
@@ -97,5 +97,8 @@ export default {
 	position: absolute;
 	width: 80%;
 	height: 800px;
+}
+.main{
+	margin-top: 150px;
 }
 </style>

@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 	<div>
 		<!--admin-->
 		<div class="inputin">
@@ -41,12 +40,6 @@
 		</el-pagination>
 		<!--表格结束-->
 	</div>
-=======
-  <div class="hello">
-    	<p>admin</p>
-    	123
-  </div>
->>>>>>> f5451e1e901498742811af9d6ca42e0e091e85c3
 </template>
 
 <script>
@@ -98,6 +91,9 @@
 			},
 			handleSelect(item) {
 				console.log(item);
+			},
+			handleCurrentChange(){
+				
 			}
 		},
 		mounted() {
@@ -112,7 +108,7 @@
 					address: '已启用',
 				}, {
 					date: '2',
-					name: '王建',
+					name: '王健',
 					number:'987654',
 					address: '已启用'
 				}, {
@@ -126,10 +122,11 @@
 					number:'963852',
 					address: '已启用'
 				}],
-				//			input1: '',
+				input1: '',
 				restaurants: [],
 				state: '',
-				timeout: null
+				timeout: null,
+				allSize:10
 			}
 		}
 	}

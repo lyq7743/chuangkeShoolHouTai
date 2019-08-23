@@ -30,7 +30,7 @@
 					<!--按钮-->
 					<el-button type="primary" icon="el-icon-edit" circle @click="handleEdit(scope.$index, scope.row)"></el-button>
 					<el-button type="success" icon="el-icon-check" circle></el-button>
-					<el-button type="danger" icon="el-icon-delete" circle  @click.native.prevent="deleteRow(scope.$index, tableData)"></el-button>
+					<el-button type="danger" icon="el-icon-delete" circle @click.native.prevent="deleteRow(scope.$index, tableData)"></el-button>
 				</template>
 			</el-table-column>
 
@@ -41,7 +41,7 @@
 		<!--表格结束-->
 	</div>
 </template>
-  
+
 <script>
 	export default {
 		name: 'HelloWorld',
@@ -92,6 +92,9 @@
 			},
 			handleSelect(item) {
 				console.log(item);
+			},
+			handleCurrentChange(){
+				
 			}
 		},
 		mounted() {
@@ -102,28 +105,29 @@
 				tableData: [{
 					date: '1',
 					name: '赖宇强',
-					number:'WEB前端工程师',
+					number: 'WEB前端工程师',
 					address: '2年',
 				}, {
 					date: '2',
 					name: '李寒英',
-					number:'全栈工程师',
+					number: '全栈工程师',
 					address: '5年'
 				}, {
 					date: '3',
 					name: '李康平',
-					number:'Java工程师',
+					number: 'Java工程师',
 					address: '5年',
 				}, {
 					date: '4',
 					name: '陈荣强',
-					number:'大数据',
+					number: '大数据',
 					address: '5年'
 				}],
-				//			input1: '',
+				input1: '',
 				restaurants: [],
 				state: '',
-				timeout: null
+				timeout: null,
+				allSize:10
 			}
 		}
 	}
@@ -151,16 +155,19 @@
 	.inputin {
 		position: relative;
 		left: 330px;
-		margin-top:120px;
+		margin-top: 120px;
 	}
-	.el-table{
+	
+	.el-table {
 		position: relative;
 		left: 50px;
 	}
-	.el-button{
+	
+	.el-button {
 		margin-left: 30px;
 	}
-	.el-pagination{
+	
+	.el-pagination {
 		position: relative;
 		left: 200px;
 	}
