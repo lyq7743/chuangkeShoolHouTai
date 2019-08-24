@@ -2,16 +2,21 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <!--<router-view/>-->
-    	<Home>
-    		
+    	<Home v-show="isShow">
+
     	</Home>
-    	
+
   </div>
 </template>
 
 <script>
 import Home from './components/Home'
 export default {
+  data:function(){
+    return{
+      isShow:false
+    }
+  },
    components:{
 	  Home
   }
