@@ -40,7 +40,7 @@
 		</el-pagination>
 		<!--表格结束-->
 		<div class="addUser" v-show="status">
-			<h2>修改用户</h2>
+			<h2>添加班级</h2>
 			<p class="row">
 				<p class="row1">班级名称：</p>
 				<p>
