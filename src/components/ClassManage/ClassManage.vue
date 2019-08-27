@@ -39,6 +39,33 @@
 		<el-pagination background layout="prev, pager, next" :total="allSize" @current-change="handleCurrentChange">
 		</el-pagination>
 		<!--表格结束-->
+		<div class="addUser" v-show="status">
+			<h2>修改用户</h2>
+			<p class="row">
+				<p class="row1">班级名称：</p>
+				<p>
+					<el-input v-model="user" placeholder="请输入内容"></el-input>
+				</p>
+			</p>
+			<p class="row">
+				<p class="row1">班主任：</p>
+				<p>
+					<el-input v-model="pass" placeholder="请输入内容" ></el-input>
+				</p>
+			</p>
+			<p class="row">
+				<p class="row1">人数：</p>
+				<p>
+					<el-input v-model="pass1" placeholder="请输入内容"></el-input>
+				</p>
+			</p>
+			<p class="row">
+				<p>
+					<el-button type="success" @click="addUser">添加</el-button>
+					<el-button type="info" @click="hidden">取消</el-button>
+				</p>
+			</p>
+		</div>
 	</div>
 </template>
   
@@ -46,6 +73,33 @@
 	export default {
 		name: 'HelloWorld',
 		methods: {
+			addUser() {
+				if (this.user != "" && this.pass != "") {
+					this.tableData.push({
+						date: this.tableData.length + 1,
+						name: this.user,
+						number: this.pass,
+						address: this.pass1+'人',
+					})
+					this.status = false
+				} else {
+					this.$message({
+						message: '请输入正确的用户名和密码',
+						center: true,
+						type: 'warning',
+						duration:2000
+					});
+				}
+			
+			},
+			hidden() {
+				this.status = false
+			},
+			handleEdit() {
+				// this.status == false?this.status=true:this.status=false,
+				this.status = true
+				console.log(this.status)
+			},
 			deleteRow(index, rows) {
 				rows.splice(index, 1);
 			},
@@ -142,7 +196,11 @@
 				restaurants: [],
 				state: '',
 				timeout: null,
-				allSize:10
+				allSize:10,
+				status:false,
+				user: '',
+				pass: '',
+				pass1: '',
 			}
 		}
 	}
@@ -151,6 +209,30 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 	/*表格样式开始*/
+	.addUser {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 50;
+		width: 500px;
+		height: 300px;
+		background: #ccc;
+		border-radius: 15px;
+	}
+	
+	.addUser h2 {
+		padding-top: 5px;
+	}
+	
+	.row1 {
+		margin: 0;
+		height: 40px;
+		line-height: 40px;
+		width: 150px;
+		float: left;
+		text-align: right;
+	}
 	
 	.el-table .warning-row {
 		background-color: oldlace;

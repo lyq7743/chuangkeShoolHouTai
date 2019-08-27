@@ -13,7 +13,7 @@
             </template>
             <el-submenu index="1-1">
               <template slot="title">
-                <router-link to="/Admin">管理员管理</router-link>
+                <router-link to="/Admin" class = "user">管理员管理</router-link>
               </template>
             </el-submenu>
           </el-submenu>
@@ -24,7 +24,7 @@
             </template>
             <el-submenu index="1-1">
               <template slot="title">
-                <router-link to="/CourseManage">课程管理</router-link>
+                <router-link to="/CourseManage" class = "user">课程管理</router-link>
               </template>
             </el-submenu>
           </el-submenu>
@@ -35,7 +35,7 @@
             </template>
             <el-submenu index="1-1">
               <template slot="title">
-                <router-link to="/ClassManage">班级管理</router-link>
+                <router-link to="/ClassManage" class = "user">班级管理</router-link>
               </template>
             </el-submenu>
           </el-submenu>
@@ -46,7 +46,7 @@
             </template>
             <el-submenu index="1-1">
               <template slot="title">
-                <router-link to="/DirectSeeding">直播课程管理</router-link>
+                <router-link to="/DirectSeeding" class = "user">直播课程管理</router-link>
               </template>
             </el-submenu>
           </el-submenu>
@@ -57,7 +57,7 @@
             </template>
             <el-submenu index="1-1">
               <template slot="title">
-                <router-link to="/TeacherManage">教师管理</router-link>
+                <router-link to="/TeacherManage" class = "user">教师管理</router-link>
               </template>
             </el-submenu>
           </el-submenu>
@@ -72,6 +72,7 @@
       <h2>创客学院后台管理系统</h2>
       <span class="loginOut" @click="loginOut">【登出】</span>
     </div>
+	
   </div>
 </template>
 
@@ -125,6 +126,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+	.user{
+		color: deepskyblue;
+		text-decoration: none;
+	}
   .ListWarp {
     display: flex;
     width: 100%;
